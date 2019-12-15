@@ -1,2 +1,2 @@
-# stepik---auto-tests-course
-housework stepik kurse automatik testing
+# stepik-auto-tests-course
+housework stepik course automatik testing
