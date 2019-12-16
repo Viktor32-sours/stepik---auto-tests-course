@@ -7,32 +7,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
 import time
 import math
-# ~ import os
-# ~ from selenium.webdriver.support.ui import Select
+
 
 """
-title_is
-title_contains
-presence_of_element_located
-visibility_of_element_located
-visibility_of
-presence_of_all_elements_located
-text_to_be_present_in_element
-text_to_be_present_in_element_value
-frame_to_be_available_and_switch_to_it
-invisibility_of_element_located
-element_to_be_clickable
-staleness_of
-element_to_be_selected
-element_located_to_be_selected
-element_selection_state_to_be
-element_located_selection_state_to_be
-alert_is_present
-
-# говорим Selenium проверять в течение 5 секунд, пока кнопка не станет кликабельной
-button = WebDriverWait(browser, 5).until(
-        EC.element_to_be_clickable((By.ID, "verify"))
-    )
 
 Открыть страницу http://suninjuly.github.io/redirect_accept.html
 Нажать на кнопку
@@ -45,13 +22,13 @@ button = WebDriverWait(browser, 5).until(
 Чтобы определить момент, когда цена аренды уменьшится до $100,
 используйте метод text_to_be_present_in_element из библиотеки expected_conditions.
 
-
 """
 link = "http://suninjuly.github.io/explicit_wait2.html"
     
 try:
     
-    browser = webdriver.Firefox()
+   # browser = webdriver.Firefox()
+    browser = webdriver.Chrome()
     browser.get(link)
  
     # говорим Selenium проверять в течение 15 секунд, пока цена не станет равной $100
@@ -85,9 +62,6 @@ try:
 
     # Отправляем заполненную форму
     button = browser.find_element_by_id('solve')
-    # ~ button = WebDriverWait(browser, 5).until(
-        # ~ EC.element_to_be_clickable((By.CLASS_NAME, "btn.btn-default"))
-    # ~ )
     button.click()
 
    
