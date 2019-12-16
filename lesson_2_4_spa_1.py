@@ -13,9 +13,7 @@ import math
 """
 
 link = "http://suninjuly.github.io/wait2.html"
-
-
-    
+   
 try:
     from selenium.webdriver.common.by import By
     from selenium.webdriver.support.ui import WebDriverWait
