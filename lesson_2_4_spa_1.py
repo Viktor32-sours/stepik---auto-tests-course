@@ -4,33 +4,15 @@
 from selenium import webdriver
 import time
 import math
-# ~ import os
-
-# ~ from selenium.webdriver.support.ui import Select
 
 """
-browser = webdriver.Chrome()
-# говорим WebDriver искать каждый элемент в течение 5 секунд
-browser.implicitly_wait(5)
-
-button = browser.find_element_by_id("verify")
-button.click()
-
-message = browser.find_element_by_id("verify_message")
-
-assert "successful" in message.text
-
-
 Открыть страницу http://suninjuly.github.io/redirect_accept.html
 Нажать на кнопку
 Переключиться на новую вкладку
 Пройти капчу для робота и получить число-ответ
-
-
-
 """
 
-# ~ link = 'http://suninjuly.github.io/redirect_accept.html'
+link = "http://suninjuly.github.io/wait2.html"
 
 
     
@@ -40,9 +22,10 @@ try:
     from selenium.webdriver.support import expected_conditions as EC
     from selenium import webdriver
 
-    browser = webdriver.Firefox()
+    # browser = webdriver.Firefox()
+    browser = webdriver.Chrome()
 
-    browser.get("http://suninjuly.github.io/wait2.html")
+    browser.get(link)
 
     # говорим Selenium проверять в течение 5 секунд, пока кнопка не станет кликабельной
     button = WebDriverWait(browser, 5).until(
