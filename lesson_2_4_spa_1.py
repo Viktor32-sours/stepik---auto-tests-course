@@ -4,12 +4,8 @@
 from selenium import webdriver
 import time
 import math
-# ~ import os
-
-# ~ from selenium.webdriver.support.ui import Select
 
 """
-
 Открыть страницу http://suninjuly.github.io/redirect_accept.html
 Нажать на кнопку
 Переключиться на новую вкладку
@@ -17,19 +13,18 @@ import math
 
 """
 
-# ~ link = 'http://suninjuly.github.io/redirect_accept.html'
-
-
-    
+link = "http://suninjuly.github.io/wait2.html"
+   
 try:
     from selenium.webdriver.common.by import By
     from selenium.webdriver.support.ui import WebDriverWait
     from selenium.webdriver.support import expected_conditions as EC
     from selenium import webdriver
 
-    browser = webdriver.Firefox()
+    # browser = webdriver.Firefox()
+    browser = webdriver.Chrome()
 
-    browser.get("http://suninjuly.github.io/wait2.html")
+    browser.get(link)
 
     # говорим Selenium проверять в течение 5 секунд, пока кнопка не станет кликабельной
     button = WebDriverWait(browser, 5).until(
